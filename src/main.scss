@@ -1,7 +1,3 @@
-@import '../config.scss';
-@import './mq.scss';
-@import './calc-rem.scss';
-
 @mixin __init($property, $val, $toRem) {
   @if ($toRem) {
     #{$property}: rem($val);

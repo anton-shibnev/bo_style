@@ -2,6 +2,8 @@
 
 scss mixin for scss perverts
 
+---
+
 ### simple example
 
 ```
@@ -98,7 +100,27 @@ and then import mixins
 
 ### how to use
 
-1. first you have to set up breakpoints in file config.scss. You can use any names for breakpoints and any values:
+default config:
+
+```
+$min-max: 'min';
+$is-rem: true;
+
+$breakpoints: (
+  'mob': 0,
+  'xs': 600px,
+  'md': 1280px,
+  'lg': 2188px,
+);
+
+$font-size: 18px;
+
+html {
+  font-size: $font-size;
+}
+```
+
+1. first you have to set up breakpoints. You can use any names for breakpoints and any values:
 
 ```
 $breakpoints: (
@@ -111,7 +133,7 @@ $breakpoints: (
 
 If the value equals 0, then the style expression will not be wrapped in @media
 
-2. If you need to subtract pixels in rem, set the main font-size in file config.scss.
+2. If you need to subtract pixels in rem, set the main font-size.
 
 ```
 $font-size: 18px;
@@ -119,7 +141,7 @@ $font-size: 18px;
 
 If you don't want to subtract pixels in rem just indicate **$is-rem: false**
 
-3. You can also specify min-width or max-width in @media. Also in config.scss file:
+3. You can also specify min-width or max-width in @media:
 
 ```
 $min-max: 'min';
