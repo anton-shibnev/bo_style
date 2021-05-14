@@ -1,4 +1,4 @@
-# inline-media-mixin
+# inline-media
 
 scss mixin for css perverts
 
@@ -70,6 +70,14 @@ compile to
   }
 }
 
+```
+
+### installation
+
+just import file \_index.scss
+
+```
+  @import 'inline-media/_index.scss'
 ```
 
 ### how to use
