@@ -1,4 +1,4 @@
-# inline-media-mixin by Anton Shibnev
+# inline-media-mixin
 
 scss mixin for css perverts
 
