@@ -120,7 +120,7 @@ html {
 }
 ```
 
-1. first you have to set up breakpoints. You can use any names for breakpoints and any values:
+1. first you can set up breakpoints. You can use any names for breakpoints and any values:
 
 ```
 $breakpoints: (
