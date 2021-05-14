@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shibnev/inline-mq-scss.git"
+    "url": "git+https://github.com/shibnev/inline-media-scss.git"
   },
   "author": "Anton Shibnev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shibnev/inline-mq-scss/issues"
+    "url": "https://github.com/shibnev/inline-media-scss/issues"
   },
-  "homepage": "https://github.com/shibnev/inline-mq-scss#readme"
+  "homepage": "https://github.com/shibnev/inline-media-scss#readme"
 }
