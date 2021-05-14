@@ -84,6 +84,12 @@ compile to
   npm i inline-media-scss -D
 ```
 
+or yarn
+
+```
+  yarn add inline-media-scss --dev
+```
+
 - or you can just download repo
 
 ```
