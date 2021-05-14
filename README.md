@@ -86,12 +86,14 @@ just import file \_index.scss
 
 ```
 $breakpoints: (
-  'mob': 10px,
+  'mob': 0,
   'xs': 600px,
   'md': 1280px,
   'lg': 2188px,
 );
 ```
+
+If the value equals 0, then the style expression will not be wrapped in @media
 
 2. If you need to subtract pixels in rem, set the main font-size in file config.scss.
 

@@ -1,4 +1,29 @@
 @import '../config.scss';
 @import './mq.scss';
 @import './calc-rem.scss';
-@import './inline-media.scss';
+
+@mixin __init($property, $val, $toRem) {
+  @if ($toRem) {
+    #{$property}: rem($val);
+  } @else {
+    #{$property}: $val;
+  }
+}
+
+@mixin _($prop) {
+  @each $property, $val in $prop {
+    @if (type-of($val) == 'map') {
+      @each $bp-name, $bp-val in $val {
+        @if (map-get($bp, $bp-name) == 0) {
+          @include __init($property, $bp-val, $is-rem);
+        } @else {
+          @media #{mq($bp-name)} {
+            @include __init($property, $bp-val, $is-rem);
+          }
+        }
+      }
+    } @else {
+      @include __init($property, $val, $is-rem);
+    }
+  }
+}
