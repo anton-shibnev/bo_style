@@ -1,0 +1,15 @@
+$min-max: 'min';
+$is-rem: true;
+
+$breakpoints: (
+  'mob': 10px,
+  'xs': 600px,
+  'md': 1280px,
+  'lg': 2188px,
+);
+
+$font-size: 18px;
+
+html {
+  font-size: $font-size;
+}

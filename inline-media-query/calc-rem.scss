@@ -1,0 +1,15 @@
+@function is-number($value) {
+  @return type-of($value) == 'number';
+}
+
+@function is-unit($value, $unit) {
+  @return is-number($value) and unit($value) == $unit;
+}
+
+@function rem($size) {
+  @if (is-unit($size, 'px')) {
+    @return $size / $font-size * 1rem;
+  } @else {
+    @return $size;
+  }
+}
