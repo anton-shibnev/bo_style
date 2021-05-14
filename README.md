@@ -72,13 +72,29 @@ compile to
 
 ```
 
+---
+
 ### installation
 
-just import file \_index.scss
+- you can install from npm
 
 ```
-  @import 'inline-media/_index.scss'
+  npm i inline-media-scss -D
 ```
+
+- or you can just download repo
+
+```
+  git clone https://github.com/shibnev/inline-media-scss.git
+```
+
+and then import mixins
+
+```
+  @import 'inline-media'
+```
+
+---
 
 ### how to use
 
