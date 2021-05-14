@@ -1,6 +1,6 @@
-# inline-media
+# inline-media-scss
 
-scss mixin for css perverts
+scss mixin for scss perverts
 
 ### simple example
 
