@@ -93,7 +93,7 @@ compile to
 and then import mixins
 
 ```
-  @import 'inline-media'
+  @import 'inline-media-scss/main.scss'
 ```
 
 ---
