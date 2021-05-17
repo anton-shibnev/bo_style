@@ -8,8 +8,8 @@ $breakpoints: (
   'lg': 2188px,
 );
 
-$font-size: 18px;
+$rem-baseline: 18px;
 
 html {
-  font-size: $font-size;
+  font-size: $rem-baseline;
 }
