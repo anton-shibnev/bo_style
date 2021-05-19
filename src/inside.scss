@@ -10,7 +10,7 @@
   @each $property, $val in $prop {
     @if (type-of($val) == 'map') {
       @each $bp-name, $bp-val in $val {
-        @if (map-get($bp, $bp-name) == 0) {
+        @if (map-get($breakpoints, $bp-name) == 0) {
           @include __init($property, $bp-val, $is-rem);
         } @else {
           @media #{mq($bp-name)} {

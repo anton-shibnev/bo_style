@@ -1,6 +1,6 @@
 {
   "name": "inline-media-scss",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "scss mixin for scss perverts",
   "main": "./inline-media/_index.scss",
   "scripts": {

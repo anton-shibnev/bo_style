@@ -15,23 +15,16 @@ scss mixin for scss perverts
         'md': 50px,
         'lg': 100px
       ),
-      padding-bottom: (
-        'mob': 45px,
-        'xs': 50px,
-        'lg': 100px,
-      ),
       text-align: (
         'mob': center,
         'xs': left,
       ),
-      position: relative,
-      z-index: 10,
-      display: flex,
-      flex-direction: column,
       align-items: (
         'mob': center,
         'xs': flex-start,
       ),
+      margin: 12px 18px 18px,
+      position: relative,
     )
   );
 }
@@ -42,18 +35,14 @@ compile to
 ```
 .test {
   padding-top: 1.7777777778rem;
-  padding-bottom: 2.5rem;
+  margin: .6666666667rem 1rem 1rem,
   text-align: center;
   position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
 @media only screen and (min-width: 600px) {
   .test {
-    padding-bottom: 2.7777777778rem;
     text-align: left;
     align-items: flex-start;
   }
