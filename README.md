@@ -10,6 +10,7 @@ scss mixin for scss perverts
 .test {
   @include _(
     (
+      '@extend': %test,
       padding-top: (
         'mob': 32px,
         'md': 50px,
@@ -19,12 +20,11 @@ scss mixin for scss perverts
         'mob': center,
         'xs': left,
       ),
-      align-items: (
-        'mob': center,
-        'xs': flex-start,
-      ),
       margin: 12px 18px 18px,
       position: relative,
+      '&:hover svg rect': (
+        fill: tomato,
+      ),
     )
   );
 }
@@ -34,33 +34,32 @@ compile to
 
 ```
 .test {
-  padding-top: 1.7777777778rem;
-  margin: .6666666667rem 1rem 1rem,
-  text-align: center;
-  position: relative;
-  align-items: center;
+	 display: flex;
 }
-
-@media only screen and (min-width: 600px) {
-  .test {
-    text-align: left;
-    align-items: flex-start;
-  }
+ .test {
+	 padding-top: 1.7777777778rem;
+	 text-align: center;
+	 margin: 0.6666666667rem 1rem 1rem;
+	 position: relative;
 }
-
-@media only screen and (min-width: 1280px) {
-  .test {
-    padding-top: 2.7777777778rem;
-  }
+ @media only screen and (min-width: 1280px) {
+	 .test {
+		 padding-top: 2.7777777778rem;
+	}
 }
-
-@media only screen and (min-width: 2188px) {
-  .test {
-    padding-top: 5.5555555556rem;
-    padding-bottom: 5.5555555556rem;
-  }
+ @media only screen and (min-width: 2188px) {
+	 .test {
+		 padding-top: 5.5555555556rem;
+	}
 }
-
+ @media only screen and (min-width: 768px) {
+	 .test {
+		 text-align: left;
+	}
+}
+ .test:hover svg rect {
+	 fill: tomato;
+}
 ```
 
 ---
@@ -88,7 +87,13 @@ or yarn
 and then import mixins
 
 ```
-  @import 'inline-media-scss/main.scss'
+  @import 'inline-media-scss'
+```
+
+or if create-react-app
+
+```
+  @import '~inline-media-scss'
 ```
 
 ---
