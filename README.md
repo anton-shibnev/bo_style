@@ -7,6 +7,10 @@ scss mixin for scss perverts
 ### simple example
 
 ```
+%test {
+  display: flex;
+}
+
 .test {
   @include _(
     (
