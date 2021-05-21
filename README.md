@@ -12,25 +12,29 @@ scss mixin for scss perverts
 }
 
 .test {
-  @include _(
-    (
-      '@extend': '%test',
-      padding-top: (
-        'mob': 32px,
-        'md': 50px,
-        'lg': 100px
-      ),
-      text-align: (
-        'mob': center,
-        'xs': left,
-      ),
-      margin: 12px 18px 18px,
-      position: relative,
-      '&:hover svg rect': (
-        fill: tomato,
-      ),
-    )
-  );
+  @include _((
+    '@extend': '%test',
+    padding-top: (
+      'mob': 32px,
+      'md': 50px,
+      'lg': 100px
+    ),
+    text-align: (
+      'mob': center,
+      'xs': left,
+    ),
+    margin: 12px 18px 18px,
+    position: relative,
+    '&:hover svg rect': (
+      fill: tomato,
+    ),
+  ));
+
+  &__foo {
+    @include _((
+      border: 1px solid black;
+    ));
+  }
 }
 
 or
@@ -53,6 +57,12 @@ or
     '&:hover svg rect': (
       fill: tomato,
     ),
+  ),
+  (
+    '__foo',
+    (
+      border: 1px solid black,
+    )
   )
 );
 ```
@@ -86,6 +96,9 @@ compile to
 }
  .test:hover svg rect {
 	 fill: tomato;
+}
+.test__foo {
+	border: 0.0555555556rem solid black;
 }
 ```
 
