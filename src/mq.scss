@@ -1,5 +1,5 @@
 @function mq($width-name) {
   $width: map-get($breakpoints, $width-name);
 
-  @return 'only screen and (#{$min-max}-width: #{$width})';
+  @return '(#{$min-max}-width: #{$width})';
 }

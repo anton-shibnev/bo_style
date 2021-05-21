@@ -1,8 +1,14 @@
 @mixin __init($property, $val, $toRem) {
-  @if ($toRem) {
-    #{$property}: rem($val);
+  @if ($property == '@extend') {
+    @each $extendVal in $property {
+      @extend #{$val};
+    }
   } @else {
-    #{$property}: $val;
+    @if ($toRem) {
+      #{$property}: rem($val);
+    } @else {
+      #{$property}: $val;
+    }
   }
 }
 
