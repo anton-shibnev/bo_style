@@ -1,4 +1,36 @@
-@mixin __init($property, $val, $toRem) {
+// @mixin __init($property, $val, $toRem) {
+//   @if ($property == '@extend') {
+//     @each $extendVal in $property {
+//       @extend #{$val};
+//     }
+//   } @else {
+//     @if ($toRem) {
+//       #{$property}: rem($val);
+//     } @else {
+//       #{$property}: $val;
+//     }
+//   }
+// }
+
+// @mixin _($prop) {
+//   @each $property, $val in $prop {
+//     @if (type-of($val) == 'map') {
+//       @each $bp-name, $bp-val in $val {
+//         @if (map-get($breakpoints, $bp-name) == 0) {
+//           @include __init($property, $bp-val, $is-rem);
+//         } @else {
+//           @media #{mq($bp-name)} {
+//             @include __init($property, $bp-val, $is-rem);
+//           }
+//         }
+//       }
+//     } @else {
+//       @include __init($property, $val, $is-rem);
+//     }
+//   }
+// }
+
+@mixin __init-property($property, $val, $toRem) {
   @if ($property == '@extend') {
     @each $extendVal in $property {
       @extend #{$val};
@@ -12,20 +44,55 @@
   }
 }
 
-@mixin _($prop) {
-  @each $property, $val in $prop {
-    @if (type-of($val) == 'map') {
-      @each $bp-name, $bp-val in $val {
-        @if (map-get($breakpoints, $bp-name) == 0) {
-          @include __init($property, $bp-val, $is-rem);
-        } @else {
-          @media #{mq($bp-name)} {
-            @include __init($property, $bp-val, $is-rem);
-          }
-        }
-      }
-    } @else {
-      @include __init($property, $val, $is-rem);
+@function map-has-keys($map, $keys) {
+  @each $key in $keys {
+    @if map-has-key($map, $key) {
+      @return true;
     }
+  }
+
+  @return false;
+}
+
+@mixin __if-breakpoints-init($property, $object, $name, $value) {
+  $breakpoints-keys: map-keys($breakpoints);
+
+  @if (map-has-keys($object, $breakpoints-keys)) {
+    @if (map-get($breakpoints, $name) == 0) {
+      @include __init-property($property, $value, $is-rem);
+    } @else {
+      @media #{mq($name)} {
+        @include __init-property($property, $value, $is-rem);
+      }
+    }
+  }
+}
+
+@mixin __init-map($thing, $property, $is-action: true) {
+  @if (type-of($thing) == 'map') {
+    @each $name, $value in $thing {
+      @include __if-breakpoints-init($property, $thing, $name, $value);
+      @if ($is-action) {
+        @include __if-action-init($property, $name, $value);
+      }
+    }
+  } @else {
+    @include __init-property($property, $thing, $is-rem);
+  }
+}
+
+$action-prefix: '&';
+
+@mixin __if-action-init($action, $name, $value) {
+  @if (str-index($action, '&') == 1) {
+    #{$action} {
+      @include __init-map($value, $name, false);
+    }
+  }
+}
+
+@mixin _($prop) {
+  @each $name, $value in $prop {
+    @include __init-map($value, $name);
   }
 }
