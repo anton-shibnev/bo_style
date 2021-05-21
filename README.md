@@ -14,7 +14,7 @@ scss mixin for scss perverts
 .test {
   @include _(
     (
-      '@extend': %test,
+      '@extend': '%test',
       padding-top: (
         'mob': 32px,
         'md': 50px,
@@ -38,7 +38,7 @@ or
 @include class(
   'test',
   (
-    '@extend': %test,
+    '@extend': '%test',
     padding-top: (
       'mob': 32px,
       'md': 50px,
