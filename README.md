@@ -32,6 +32,29 @@ scss mixin for scss perverts
     )
   );
 }
+
+or
+
+@include class(
+  'test',
+  (
+    '@extend': %test,
+    padding-top: (
+      'mob': 32px,
+      'md': 50px,
+      'lg': 100px
+    ),
+    text-align: (
+      'mob': center,
+      'xs': left,
+    ),
+    margin: 12px 18px 18px,
+    position: relative,
+    '&:hover svg rect': (
+      fill: tomato,
+    ),
+  )
+);
 ```
 
 compile to
