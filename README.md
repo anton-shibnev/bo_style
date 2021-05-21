@@ -71,34 +71,34 @@ compile to
 
 ```
 .test {
-	 display: flex;
+  display: flex;
 }
- .test {
-	 padding-top: 1.7777777778rem;
-	 text-align: center;
-	 margin: 0.6666666667rem 1rem 1rem;
-	 position: relative;
+.test {
+  padding-top: 1.7777777778rem;
+  text-align: center;
+  margin: 0.6666666667rem 1rem 1rem;
+  position: relative;
 }
- @media only screen and (min-width: 1280px) {
-	 .test {
-		 padding-top: 2.7777777778rem;
-	}
+@media only screen and (min-width: 1280px) {
+  .test {
+    padding-top: 2.7777777778rem;
+  }
 }
- @media only screen and (min-width: 2188px) {
-	 .test {
-		 padding-top: 5.5555555556rem;
-	}
+@media only screen and (min-width: 2188px) {
+  .test {
+    padding-top: 5.5555555556rem;
+  }
 }
- @media only screen and (min-width: 768px) {
-	 .test {
-		 text-align: left;
-	}
+@media only screen and (min-width: 768px) {
+  .test {
+    text-align: left;
+  }
 }
- .test:hover svg rect {
-	 fill: tomato;
+.test:hover svg rect {
+  fill: tomato;
 }
 .test__foo {
-	border: 0.0555555556rem solid black;
+  border: 0.0555555556rem solid black;
 }
 ```
 
