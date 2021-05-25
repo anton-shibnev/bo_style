@@ -118,7 +118,7 @@ or yarn
   yarn add inline-media-scss --dev
 ```
 
-- or you can just download repo
+- or you can just clone repo
 
 ```
   git clone https://github.com/shibnev/inline-media-scss.git
