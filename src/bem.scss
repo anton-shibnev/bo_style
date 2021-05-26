@@ -1,0 +1,5 @@
+@mixin bem($className, $body) {
+  &__#{$className} {
+    @include _($body);
+  }
+}
