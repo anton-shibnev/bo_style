@@ -1,7 +1,17 @@
+@function first-letter($str) {
+  @return str-slice($str, 1, 1);
+}
+
 @mixin __init-property($property, $val, $toRem) {
-  @if ($property == '@extend') {
-    @each $extendVal in $property {
-      @extend #{$val};
+  @if (first-letter($property) == '@') {
+    @if ($property == '@extend') {
+      @each $extendVal in $property {
+        @extend #{$val};
+      }
+    } @else {
+      @if ($property == '@wh') {
+        @include __wh($val);
+      }
     }
   } @else {
     @if ($toRem) {

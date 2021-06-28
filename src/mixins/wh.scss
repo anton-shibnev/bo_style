@@ -1,0 +1,15 @@
+@mixin __wh($val) {
+  $width: 0;
+  $height: 0;
+
+  @if (length($val) == 2) {
+    $width: nth($val, 1);
+    $height: nth($val, 2);
+  } @else {
+    $width: nth($val, 1);
+    $height: nth($val, 1);
+  }
+
+  width: rem($width);
+  height: rem($height);
+}
