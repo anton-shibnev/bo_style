@@ -1,0 +1,18 @@
+@function transition-map($list) {
+  $str: '';
+
+  @each $item in $list {
+    $bla: '#{$item} #{$default-transition}, ';
+    $str: str-insert($str, $bla, 9999);
+  }
+
+  @return unquote($str);
+}
+
+@mixin __transition($property, $val) {
+  @if ($property == '@transition') {
+    @if (type-of($val) == 'list') {
+      transition: transition-map($val);
+    }
+  }
+}

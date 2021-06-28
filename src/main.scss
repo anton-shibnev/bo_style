@@ -11,6 +11,8 @@
     } @else {
       // === mixins ===
       @include __wh($property, $val);
+      @include __circle($property, $val);
+      @include __transition($property, $val);
     }
   } @else {
     @if ($toRem) {

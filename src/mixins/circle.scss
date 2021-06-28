@@ -1,0 +1,8 @@
+@mixin __circle($property, $val) {
+  @if ($property == '@circle') {
+    $property: '@wh';
+
+    border-radius: 50%;
+    @include __wh($property, $val);
+  }
+}
