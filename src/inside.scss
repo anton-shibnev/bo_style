@@ -9,9 +9,8 @@
         @extend #{$val};
       }
     } @else {
-      @if ($property == '@wh') {
-        @include __wh($val);
-      }
+      // === mixins ===
+      @include __wh($property, $val);
     }
   } @else {
     @if ($toRem) {
