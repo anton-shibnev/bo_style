@@ -1,19 +1,19 @@
 {
-  "name": "bo-styles",
+  "name": "bo_style",
   "version": "1.1.6",
   "description": "scss mixins for scss perverts",
-  "main": "./inline-media/_index.scss",
+  "main": "_index.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shibnev/inline-media-scss.git"
+    "url": "git+https://github.com/shibnev/bo_style.git"
   },
   "author": "Anton Shibnev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shibnev/inline-media-scss/issues"
+    "url": "https://github.com/shibnev/bo_style/issues"
   },
-  "homepage": "https://github.com/shibnev/inline-media-scss#readme"
+  "homepage": "https://github.com/shibnev/bo_style#readme"
 }
