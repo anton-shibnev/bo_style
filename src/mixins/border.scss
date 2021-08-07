@@ -1,0 +1,7 @@
+@mixin border($props) {
+  @include _(
+    (
+      border: $props,
+    )
+  );
+}

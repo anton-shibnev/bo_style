@@ -1,17 +1,32 @@
-@mixin __wh($property, $val) {
-  @if ($property == '@wh') {
-    $width: 0;
-    $height: 0;
-
-    @if (length($val) == 2) {
-      $width: nth($val, 1);
-      $height: nth($val, 2);
-    } @else {
-      $width: nth($val, 1);
-      $height: nth($val, 1);
-    }
-
-    width: rem($width);
-    height: rem($height);
-  }
+@mixin wh($w, $h: $w) {
+  @include _(
+    (
+      width: $w,
+      height: $h,
+    )
+  );
 }
+
+@mixin height($n) {
+  @include _(
+    (
+      height: $n,
+    )
+  );
+}
+
+@mixin width($n) {
+  @include _(
+    (
+      width: $n,
+    )
+  );
+}
+
+@mixin max-width($n) {
+  @include _(
+    (
+      max-width: $n,
+    )
+  );
+} ;

@@ -1,0 +1,4 @@
+@mixin gradient($from, $to, $main: $from) {
+  background: $main;
+  background: radial-gradient($from 5%, $to 100%);
+}

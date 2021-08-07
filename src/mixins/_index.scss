@@ -1,3 +1,27 @@
-@import 'wh.scss';
-@import 'circle.scss';
-@import 'transition.scss';
+@import './font.scss';
+@import './abs-center.scss';
+@import './wh.scss';
+@import './box-shadow.scss';
+@import './padding.scss';
+@import './margin.scss';
+@import './circle.scss';
+@import './pseudo.scss';
+@import './gradient.scss';
+@import './border.scss';
+
+// common
+@mixin gap($props) {
+  @include _(
+    (
+      gap: $props,
+    )
+  );
+}
+
+@mixin border-radius($props) {
+  @include _(
+    (
+      border-radius: $props,
+    )
+  );
+}

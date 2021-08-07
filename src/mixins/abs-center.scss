@@ -1,0 +1,16 @@
+@mixin abs-center($z: false, $rest: '') {
+  position: absolute;
+
+  @if ($z == false) {
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%) #{$rest};
+  } @else if ($z == y) {
+    top: 50%;
+    transform: translateY(-50%) #{$rest};
+  } @else if ($z == x) {
+    left: 50%;
+    transform: translateX(-50%) #{$rest};
+  }
+}

@@ -1,0 +1,52 @@
+@mixin font(
+  $size: false,
+  $lh: false,
+  $weight: false,
+  $spacing: false,
+  $family: false,
+  $style: false
+) {
+  @if $size {
+    @include _(
+      (
+        font-size: $size,
+      )
+    );
+  }
+
+  @if $lh {
+    @include _(
+      (
+        line-height: $lh,
+      )
+    );
+  }
+
+  @if $weight {
+    @include _(
+      (
+        font-weight: $weight,
+      )
+    );
+  }
+
+  @if $spacing {
+    @include _(
+      (
+        letter-spacing: $spacing,
+      )
+    );
+  }
+
+  @if $family {
+    font-family: $family;
+  }
+
+  @if $style {
+    @include _(
+      (
+        font-style: $style,
+      )
+    );
+  }
+}

@@ -1,0 +1,7 @@
+@mixin pseudo($name: after, $content: '') {
+  &::#{$name} {
+    content: $content;
+    display: block;
+    @content;
+  }
+}
