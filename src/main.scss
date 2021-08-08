@@ -8,11 +8,6 @@
       @each $extendVal in $property {
         @extend #{$val};
       }
-    } @else {
-      // === mixins ===
-      @include __wh($property, $val);
-      @include __circle($property, $val);
-      @include __transition($property, $val);
     }
   } @else {
     @if ($toRem) {
@@ -46,6 +41,22 @@
     }
   }
 }
+
+// @mixin __abList($aProp, $bProp, $val) {
+//   $a: 0;
+//   $b: 0;
+
+//   @if (length($val) == 2) {
+//     $a: nth($val, 1);
+//     $b: nth($val, 2);
+//   } @else {
+//     $a: nth($val, 1);
+//     $b: nth($val, 1);
+//   }
+
+//   #{$aProp}: rem($a);
+//   #{$bProp}: rem($b);
+// }
 
 $inner-prefix: '&';
 

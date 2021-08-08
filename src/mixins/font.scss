@@ -1,3 +1,44 @@
+@mixin font-size($n) {
+  @include _(
+    (
+      font-size: $n,
+    )
+  );
+}
+
+@mixin line-height($n) {
+  @include _(
+    (
+      line-height: $n,
+    )
+  );
+}
+
+@mixin font-weight($n) {
+  @include _(
+    (
+      font-weight: $n,
+    )
+  );
+}
+
+@mixin letter-spacing($n) {
+  @include _(
+    (
+      letter-spacing: $n,
+    )
+  );
+}
+
+
+@mixin font-style($n) {
+  @include _(
+    (
+      font-style: $n,
+    )
+  );
+}
+
 @mixin font(
   $size: false,
   $lh: false,
@@ -7,35 +48,19 @@
   $style: false
 ) {
   @if $size {
-    @include _(
-      (
-        font-size: $size,
-      )
-    );
+    @include font-size($size);
   }
 
   @if $lh {
-    @include _(
-      (
-        line-height: $lh,
-      )
-    );
+    @include line-height($lh);
   }
 
   @if $weight {
-    @include _(
-      (
-        font-weight: $weight,
-      )
-    );
+    @include font-weight($weight);
   }
 
   @if $spacing {
-    @include _(
-      (
-        letter-spacing: $spacing,
-      )
-    );
+    @include letter-spacing($lh);
   }
 
   @if $family {
@@ -43,10 +68,7 @@
   }
 
   @if $style {
-    @include _(
-      (
-        font-style: $style,
-      )
-    );
+    @include font-style($style);
   }
 }
+

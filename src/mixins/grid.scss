@@ -1,0 +1,7 @@
+@mixin grid-gap($n) {
+  @include _(
+    (
+      grid-gap: $n,
+    )
+  );
+}

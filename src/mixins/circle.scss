@@ -1,9 +1,5 @@
 @mixin circle($w, $h: $w) {
-  @include _(
-    (
-      width: $w,
-      height: $h,
-      border-radius: 50%,
-    )
-  );
+  @include wh($w, $h);
+
+  border-radius: 50%;
 }
