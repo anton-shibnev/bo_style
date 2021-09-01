@@ -1,7 +1,0 @@
-@mixin box-shadow($props) {
-  @include _(
-    (
-      box-shadow: $props,
-    )
-  );
-}

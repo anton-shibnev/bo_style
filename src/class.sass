@@ -1,0 +1,7 @@
+@mixin class($className, $body, $restInners...)
+  .#{$className}
+    @include _($body)
+
+    @each $innerClassName, $innerBody in $restInners
+      &#{$innerClassName}
+        @include _($innerBody)

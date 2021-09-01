@@ -1,0 +1,13 @@
+@mixin font($size: false, $lh: false, $weight: false, $spacing: false, $family: false, $style: false)
+  @if $size
+    +font-size($size)
+  @if $lh
+    +line-height($lh)
+  @if $weight
+    +font-weight($weight)
+  @if $spacing
+    +letter-spacing($lh)
+  @if $family
+    font-family: $family
+  @if $style
+    +font-style($style)

@@ -1,8 +1,0 @@
-.container,
-%container {
-  @include margin-x(auto);
-  @include padding-x($container-padding);
-  @include max-width($container-mw + map-get($container-padding, 'lg') * 2);
-  @include wh(100%);
-  position: relative;
-}
