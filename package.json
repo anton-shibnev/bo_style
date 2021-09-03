@@ -1,8 +1,9 @@
 {
   "name": "bo_style",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "description": "scss mixins for scss perverts",
   "main": "_index.sass",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/shibnev/bo_style/issues"
   },
-  "homepage": "https://github.com/shibnev/bo_style#readme"
+  "homepage": "https://github.com/shibnev/bo_style#readme",
+  "dependencies": {
+    "node-fetch": "^3.0.0"
+  }
 }
