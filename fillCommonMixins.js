@@ -1,6 +1,8 @@
 import fetch from 'node-fetch';
 import fs from 'fs';
 
+const IGNORED_PROPERTIES = ['--*'];
+
 class FillCommonMixin {
   constructor({ fileName }) {
     this.url = 'https://www.w3.org/Style/CSS/all-properties.en.json';
@@ -23,10 +25,15 @@ class FillCommonMixin {
       const result = [];
 
       list.forEach((item, index) => {
-        if (index === 0) {
-          result.push(this.mixinTemplate(item.property));
-        } else if (index !== 0 && item.property !== list[index - 1].property) {
-          result.push(this.mixinTemplate(item.property));
+        if (!IGNORED_PROPERTIES.includes(item.property)) {
+          if (index === 0) {
+            result.push(this.mixinTemplate(item.property));
+          } else if (
+            index !== 0 &&
+            item.property !== list[index - 1].property
+          ) {
+            result.push(this.mixinTemplate(item.property));
+          }
         }
       });
 
