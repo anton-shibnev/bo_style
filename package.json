@@ -1,6 +1,6 @@
 {
   "name": "bo_style",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "scss mixins for scss perverts",
   "main": "_index.sass",
   "type": "module",
