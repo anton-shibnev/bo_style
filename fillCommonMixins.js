@@ -1,13 +1,12 @@
 import fetch from 'node-fetch';
 import fs from 'fs';
-import path from 'path';
 
 const IGNORED_PROPERTIES = ['--*'];
 
 class FillCommonMixin {
   constructor({ fileName }) {
     this.url =
-      'https://raw.githubusercontent.com/shibnev/all-css-properties/master/allCssProperties.json';
+      'https://raw.githubusercontent.com/shibnev/bo_style/master/allCssProperties.json';
 
     this.fileName = fileName;
 
