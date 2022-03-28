@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shibnev/bo_style.git"
+    "url": "git+https://github.com/anton-shibnev/bo_style.git"
   },
   "author": "Anton Shibnev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shibnev/bo_style/issues"
+    "url": "https://github.com/anton-shibnev/bo_style/issues"
   },
-  "homepage": "https://github.com/shibnev/bo_style#readme",
+  "homepage": "https://github.com/anton-shibnev/bo_style#readme",
   "dependencies": {
     "node-fetch": "^3.0.0"
   }
